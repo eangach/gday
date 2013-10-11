@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 #
-puts "G'day!"
+def hi
+  puts "G'day!"
+end
+
+hi
