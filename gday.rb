@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 #
-def hi
-  puts "G'day!"
+class Greeting
+  def hi
+    puts "G'day!"
+  end
 end
 
-hi
+# Run if the file is executed directly
+if __FILE__ == $0
+  greeting = Greeting.new
+  greeting.hi
+end
