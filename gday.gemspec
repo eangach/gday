@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Gday::VERSION
   spec.authors       = ["Thomas Behrndt"]
   spec.email         = ["thomas.behrndt@me.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A gem developed as a learning experience.}
+  spec.summary       = %q{This gem is part of my learning journey for developing and published Ruby Web Applications.}
+  spec.homepage      = "http://eangach.github.io/gday"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

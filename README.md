@@ -1,6 +1,8 @@
 # Gday
 
-TODO: Write a gem description
+This gem is part of my learning journey for developing and published Ruby Web Applications.
+
+In time it will change as I build in more functionality and try new things.
 
 ## Installation
 
