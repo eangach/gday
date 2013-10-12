@@ -6,14 +6,26 @@ module Gday
   class Greeting
     # Saying Hello in Aussie
     #
-    # @return [String] Hello in Aussie
+    # @return [String]
+    #   Hello in Aussie
+    #
+    # @example
+    #   Gday::Greeting.new.hi #=> "G'day!"
+    #
+    # @api public
     def hi
       puts "G'day!"
     end
 
     # Saying Goodbye in Aussie
     #
-    # @return [String] Goodbye in Aussie
+    # @return [String]
+    #   Goodbye in Aussie
+    #
+    # @example
+    #   Gday::Greeting.new.bye #=> "Cheerio"
+    #
+    # @api public
     def bye
       puts "Cheerio"
     end
