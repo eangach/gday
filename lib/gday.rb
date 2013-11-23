@@ -3,11 +3,11 @@ require_relative "gday/version"
 module Gday
   class Greeting
     def hi
-      puts "G'day!"
+      "G'day!"
     end
 
     def bye
-      puts "Cheerio"
+      "Cheerio"
     end
   end
 end
