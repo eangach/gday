@@ -1,4 +1,4 @@
-require "gday/version"
+require_relative "gday/version"
 
 module Gday
   class Greeting
