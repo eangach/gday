@@ -1,3 +1,4 @@
 module Gday
-  VERSION = "0.0.2"
+  # The version for the gday gem.
+  VERSION = "0.0.3"
 end
