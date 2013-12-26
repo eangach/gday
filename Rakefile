@@ -29,3 +29,9 @@ task :verify_measurements => :yardstick_measure
 # Add verify documentation task for developement only
 # TODO: add development dependancy
 task :doc => :verify_measurements
+
+require 'rake/testtask'
+
+Rake::TestTask.new do |t|
+  t.pattern = 'test/**/*_test.rb'
+end
