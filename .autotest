@@ -1,0 +1,38 @@
+require 'autotest/restart'
+
+Autotest.options[:quiet] = true
+
+Autotest.add_hook :initialize do |at|
+
+  at.order = :random
+
+  # Test helpers end with test_helper
+  # Tests end with _test
+  # All test and test helper files are ruby files
+
+  # Remove default test files
+  at.clear_mappings
+
+  # File in /test -> run it
+  at.add_mapping(%r{^test/.*_test\.rb$}, true) do |filename, _|
+    [ filename ]
+  end
+
+  # File in /lib -> run test file if exists
+  # else run all tests
+  at.add_mapping(%r{^(lib/.*)\.rb$}) do |filename, match|
+    testFile = "test/#{match[1]}_test.rb"
+    if File.exist? testFile
+      [ testFile ]
+    else
+      Dir['test/**/*.rb']
+    end
+  end
+
+  # Re-run all tests is test helpers are updated
+  at.add_mapping(%r{^test/.*test_helper\.rb$}) do |filename, _|
+    Dir['test/**/*.rb']
+  end
+
+  nil
+end
