@@ -35,3 +35,15 @@ require 'rake/testtask'
 Rake::TestTask.new do |t|
   t.pattern = 'test/**/*_test.rb'
 end
+
+# Always run coverage for tests
+task :test => :coverage
+
+# Check test coverage
+desc 'Create test coverage report (will also run all tests)'
+task :coverage do
+  ENV['COVERAGE'] = 'true'
+
+  # Run tests if not already included in tasks
+  Rake::Task['test'].invoke unless Rake.application.top_level_tasks.include? 'test'
+end

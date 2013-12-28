@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yardstick"
   spec.add_development_dependency "backports"
   spec.add_development_dependency "autotest-standalone"
+  spec.add_development_dependency "simplecov"
 end
