@@ -1,5 +1,8 @@
 require "bundler/gem_tasks"
 
+# Set default task to test
+task :default => :test
+
 # Generate documentation
 require 'yard'
 YARD::Rake::YardocTask.new do |t|
