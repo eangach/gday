@@ -1,4 +1,5 @@
 require 'autotest/restart'
+require 'autotest/fsevent'
 
 Autotest.options[:quiet] = true
 
