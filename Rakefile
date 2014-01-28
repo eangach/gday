@@ -50,3 +50,21 @@ task :coverage do
   # Run tests if not already included in tasks
   Rake::Task['test'].invoke unless Rake.application.top_level_tasks.include? 'test'
 end
+
+desc 'Capture output of tests to file'
+task :test_capture do
+
+  old_stdout = $stdout.dup
+  old_stderr = $stderr.dup
+  Dir.mkdir("test_results") unless File.exists?("test_results")
+  #$stdout.reopen("test_results/test.log", "w")
+  $stdout.reopen IO.popen "tee test_results/test.log", "a"
+  $stdout.sync = true
+  $stderr.reopen($stdout)
+
+  # Run tests if not already included in tasks
+  Rake::Task['test'].invoke unless Rake.application.top_level_tasks.include? 'test'
+
+  $stdout.reopen old_stdout
+  $stderr.reopen old_stderr
+end
