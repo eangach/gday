@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "autotest-fsevent"
   spec.add_development_dependency "minitest-reporters"
   spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "rubocop"
 end
