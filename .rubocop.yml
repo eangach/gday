@@ -1,0 +1,7 @@
+AllCops:
+  Includes:
+    - Rakefile
+    - '*.gemspec'
+
+LineLength:
+  Max: 120
