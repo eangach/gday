@@ -68,3 +68,8 @@ task :test_capture do
   $stdout.reopen old_stdout
   $stderr.reopen old_stderr
 end
+
+# RuboCop is a Ruby static code analyzer
+require 'rubocop/rake_task'
+
+Rubocop::RakeTask.new
