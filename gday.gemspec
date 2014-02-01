@@ -1,4 +1,7 @@
 # coding: utf-8
+
+require 'English'
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gday/version'
@@ -13,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'http://eangach.github.io/gday'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(/^bin\//) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(/^(test|spec|features)\//)
   spec.require_paths = ['lib']
