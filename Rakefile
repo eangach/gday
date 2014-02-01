@@ -1,3 +1,5 @@
+# rubocop:disable HashSyntax
+
 require 'bundler/gem_tasks'
 
 # Set default task to test
