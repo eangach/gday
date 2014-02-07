@@ -1,4 +1,6 @@
-require "bundler/gem_tasks"
+# rubocop:disable HashSyntax
+
+require 'bundler/gem_tasks'
 
 # Set default task to test
 task :default => :test
@@ -6,8 +8,8 @@ task :default => :test
 # Generate documentation
 require 'yard'
 YARD::Rake::YardocTask.new do |t|
-  #t.files   = ['lib/**/*.rb', 'OTHER_PATHS']   # optional
-  #t.options = ['--any', '--extra', '--opts'] # optional
+  # t.files   = ['lib/**/*.rb', 'OTHER_PATHS']   # optional
+  # t.options = ['--any', '--extra', '--opts'] # optional
 end
 
 # Run documentation tasks
@@ -56,9 +58,9 @@ task :test_capture do
 
   old_stdout = $stdout.dup
   old_stderr = $stderr.dup
-  Dir.mkdir("test_results") unless File.exists?("test_results")
-  #$stdout.reopen("test_results/test.log", "w")
-  $stdout.reopen IO.popen "tee test_results/test.log", "a"
+  Dir.mkdir('test_results') unless File.exists?('test_results')
+  # $stdout.reopen('test_results/test.log', 'w')
+  $stdout.reopen IO.popen 'tee test_results/test.log', 'a'
   $stdout.sync = true
   $stderr.reopen($stdout)
 
@@ -68,3 +70,8 @@ task :test_capture do
   $stdout.reopen old_stdout
   $stderr.reopen old_stderr
 end
+
+# RuboCop is a Ruby static code analyzer
+require 'rubocop/rake_task'
+
+Rubocop::RakeTask.new

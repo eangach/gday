@@ -2,7 +2,7 @@ require_relative '../test_helper'
 
 describe Gday do
 
-  describe "Greeting" do
+  describe 'Greeting' do
 
     let(:greeting) { Gday::Greeting.new }
 
@@ -11,7 +11,7 @@ describe Gday do
     end
 
     it "must say 'Cheerio'" do
-      greeting.bye.must_equal "Cheerio"
+      greeting.bye.must_equal 'Cheerio'
     end
 
   end

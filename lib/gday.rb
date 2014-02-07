@@ -1,4 +1,4 @@
-require_relative "gday/version"
+require_relative 'gday/version'
 
 # The Gday module is the main container for the gday gem.
 module Gday
@@ -27,7 +27,7 @@ module Gday
     #
     # @api public
     def bye
-      "Cheerio"
+      'Cheerio'
     end
   end
 end
