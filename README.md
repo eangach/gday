@@ -20,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Code sample:
+
+    require 'gday'
+    
+    g = Gday::Greeting.new
+    
+    # Say 'hi' in Aussie
+    puts g.hi
+    
+    # Say 'bye' in Aussie
+    puts g.bye
 
 ## Contributing
 
